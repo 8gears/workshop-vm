@@ -1,6 +1,6 @@
 <p align="center"><a href="http://8gears.com" target="_blank"><img width="100"src="logo.png"></a></p>
 <h1 align="center">Workshop VM</h1>
-<p align="center">An instant to use Linux VM for ICT workshops and labs for Windows and Mac</p>
+<p align="center">An instant to use Linux VM for workshops, code labs and hackathons for Windows and Mac</p>
 
 # Workshop Linux VM
 
