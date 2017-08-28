@@ -108,3 +108,24 @@ During the workshop it is recommended to close all programms and stop unneeded p
 ## Known Issues
 
 Sometimes things don't run as expected, especially as they are many files that are downloaded from various sources. If an error should happen during the setup often it is already enough to run `vagrant up` again.
+
+## Project Principles
+
+* Community: If a newbie has a bad time, it's a bug.
+* Software: Make it work, then make it right, then make it fast.
+* Technology: If it doesn't do a thing today, we can make it do it tomorrow.
+
+## Contributing
+
+All contributions are welcome: ideas, patches, documentation, bug reports,
+complaints, and even something you drew up on a napkin.
+
+Programming is not a required skill. Whatever you've seen about open source and
+maintainers or community members  saying "send patches or die" - you will not
+see that here.
+
+It is more important to me that you are able to contribute.
+
+## License
+
+Apache License, Version 2.0
