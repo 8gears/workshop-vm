@@ -14,8 +14,8 @@ Only a minimal set of tools is required to be installed on the Host Machine. Mai
 
 Supported Operating Systems
 
-- [Windows](#Windows-Setup)
-- [MacOS](#Mac-Setup)
+- [Windows](#Initial-Windows-Setup)
+- [MacOS](#Initial-MacOS-Setup)
 
 ### Content
 
@@ -29,7 +29,7 @@ Supported Operating Systems
 - At least 10 GB of free space
 - +8 GB of RAM (50% will be used for the VM)
 
-## Initial Setup for Windows
+## Initial Windows Setup
 
 To install Vargrant and VirtualBox we are going to use [Chocolatly](https://chocolatey.org) (a package manager for Windows). If you have both tools installed you can jump straight to the [Install Workshop VM](#Install-Workshop-VM) section.
 
@@ -51,15 +51,14 @@ Now we can use Chocolatly to install the other tools. If you don't have Git inst
 
 You can continue now with the final step [Install Workshop VM](#Install-Workshop-VM).
 
-## Initial Setup for MacOS
+## Initial MacOS Setup
 
 For the MacOS setup we are going to use [Homebrew](https://brew.sh/), a package manager for MacOS.
 
 Open a terminal and paste the following line at a Terminal prompt.
 
 ```sh
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-&& brew tap caskroom/cask
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && brew tap caskroom/cask
 ```
 
 ### Install VirtualBox and Vagrant for MacOS
@@ -85,7 +84,7 @@ cd workshop-vm
 > vagrant up
 ```
 
-If the Ubuntu User Interface pops up, wait until all the provision scripts finish, thy run in the background. You can track their progress in the terminal.
+If the Ubuntu Desktop pops up, wait until all the provision scripts finish. You can track their progress in the terminal.
 
 ## Workshop VM Applications
 
@@ -106,4 +105,4 @@ The username and password is in both cases vagrant.
 
 ## Known Issues
 
-Sometimes things don't run as expected, especially as they are many files downloaded from various sources. If this happens often its already enough to run `vagrant up` again.
+Sometimes things don't run as expected, especially as they are many files that are downloaded from various sources. If an error should happen during the setup often it is already enough to run `vagrant up` again.
