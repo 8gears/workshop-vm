@@ -18,8 +18,8 @@ Only a minimal set of tools is required to be installed on the Host Machine. Mai
 
 Supported Operating Systems
 
-- [Windows](#Initial-Windows-Setup)
-- [MacOS](#Initial-MacOS-Setup)
+- [Windows](#initial-windows-setup)
+- [MacOS](#initial-macos-setup)
 
 ### Workshop VM Applications
 
@@ -39,7 +39,7 @@ List of additional tools and application that are installed with the VM.
 
 ## Initial Windows Setup
 
-To install Vargrant and VirtualBox we are going to use [Chocolatly](https://chocolatey.org) (a package manager for Windows). If you have both tools installed you can jump straight to the [Install Workshop VM](#Install-Workshop-VM) section.
+To install Vargrant and VirtualBox we are going to use [Chocolatly](https://chocolatey.org) (a package manager for Windows). If you have both tools installed you can jump straight to the [Install Workshop VM](#install-workshop-vm) section.
 
 If for what ever reasons you have difficulties visit the [Chocolatly Install Website](https://chocolatey.org/install) for alternative installation methods and a alternative explanation.
 
@@ -57,7 +57,7 @@ Now we can use Chocolatly to install the other tools. If you don't have Git inst
 > choco install -y virtualbox vagrant
 ```
 
-You can continue now with the final step [Install Workshop VM](#Install-Workshop-VM).
+You can continue now with the final step [Install Workshop VM](#install-workshop-vm).
 
 ## Initial MacOS Setup
 
