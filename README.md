@@ -1,14 +1,18 @@
 <p align="center"><a href="http://8gears.com" target="_blank"><img width="100"src="logo.png"></a></p>
 <h1 align="center">Workshop VM</h1>
-<p align="center">An instant to use Linux VM for workshops and classrooms for Windows and Mac</p>
+<p align="center">An instant to use Linux VM for ICT workshops and labs for Windows and Mac</p>
 
 # Workshop Linux VM
 
-is an easy to setup and ready to use Linux VM designed to provide all students an equal starting position and a quick getting started during workshops. After the installation the students use only this VM as it brings all the needed tools for the workshop.
+is an easy to setup and ready to use Linux Desktop designed to provide students an equal starting position and an instant kickstart during workshops. After the installation of the VM students will only use this VM during the session. The VM should bring all the needed tools for the workshop.
 
-This VM was initially designed for 8gears Docker, Kubernetes or OpenShift workshops. However it can also be used for any other type of workshop. Pull requests are welcomed.
+This VM was initially designed for 8gears Docker, Kubernetes or OpenShift workshops. However it can also be used for any other type of coding, developing, hacking workshop. Pull requests are welcomed to add more functionality.
 
 ## What is it?
+
+- Workshop VM is based on Ubuntu 16.04 with Unity Desktop.
+- Vargrant is used to install and configure the VM.
+- Additional provision scripts install more tools and perform initial updates.
 
 Only a minimal set of tools is required to be installed on the Host Machine. Mainly VirtualBox and Vagrant.
 
@@ -17,17 +21,21 @@ Supported Operating Systems
 - [Windows](#Initial-Windows-Setup)
 - [MacOS](#Initial-MacOS-Setup)
 
-### Content
+### Workshop VM Applications
 
-- Workshop VM is based on Ubuntu 16.04 minus the office tools.
-- Vargrant is used to install and configure the VM
-- Additional provision scripts can install other tools.
+List of additional tools and application that are installed with the VM.
+
+- Docker
+- Docker Compose
+- OpenShift CLI (OC)
+- Visual Studio Code
+- Git
 
 ### Prerequisites
 
 - Admin rights on your Computer
 - At least 10 GB of free space
-- +8 GB of RAM (50% will be used for the VM)
+- +8 GB of RAM (75% will be used for the VM)
 
 ## Initial Windows Setup
 
@@ -86,15 +94,6 @@ cd workshop-vm
 
 If the Ubuntu Desktop pops up, wait until all the provision scripts finish. You can track their progress in the terminal.
 
-## Workshop VM Applications
-
-List of additional tools and application that are installed with the VM.
-
-- Docker
-- Docker Compose
-- OpenShift CLI (OC)
-- Visual Studio Code
-- Git
 
 ## General Usage
 
@@ -102,6 +101,8 @@ After successfully initialization you can start and stop the vm with `vagrant` c
 However it is also possible to do the same with the VirtualBox Manager GUI.
 
 The username and password is in both cases vagrant.
+
+During the workshop it is recommended to close all programms and stop unneeded process on the Host OS as this VM takes up 75% of the RAM. 
 
 ## Known Issues
 
