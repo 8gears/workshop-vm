@@ -66,12 +66,13 @@ For the MacOS setup we are going to use [Homebrew](https://brew.sh/), a package 
 Open a terminal and paste the following line at a Terminal prompt.
 
 ```sh
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && brew tap caskroom/cask
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 ### Install VirtualBox and Vagrant for MacOS
 
 ```sh
+brew tap caskroom/cask
 brew cask install virtualbox vagrant
 ```
 
