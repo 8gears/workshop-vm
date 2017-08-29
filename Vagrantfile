@@ -20,8 +20,7 @@ Vagrant.configure(2) do |config|
     vb.customize ["modifyvm", :id,
                  "--description", config.vm.hostname,
                  "--vram", 64,
-                 "--accelerate3d", "on",
-                 "--cableconnected0", "on",
+                 "--accelerate3d", "on",                 
                  "--cableconnected1", "on"]                 
     vb.gui = true  # Display the VirtualBox GUI when booting the machine
     # Determine existing machine Memory& CPUs  and use it in the VM
@@ -49,7 +48,7 @@ Vagrant.configure(2) do |config|
   if File.exists?(ENV['HOME']+"/.gitconfig")
     config.vm.provision "file", source: ENV['HOME']+"/.gitconfig", destination: ".gitconfig"
   end
-  if File.exists?(ENV['HOME']+"/.ssh/id_rsa")
+  if Dir.exist?(ENV['HOME']+"/.ssh/id_rsa")
     config.vm.provision "file", source: ENV['HOME']+"/.ssh/id_rsa", destination: ".ssh/id_rsa"
     config.vm.provision "file", source: ENV['HOME']+"/.ssh/id_rsa.pub", destination: ".ssh/id_rsa.pub"
   end
