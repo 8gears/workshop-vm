@@ -45,11 +45,17 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.provision "file", run: "always", source: "provision/mod-bash.sh", destination: ".workshopvm/mod-bash.sh"
-  config.vm.provision "file", run: "always", source: "provision/user-settings.sh", destination: ".workshopvm/user-settings.sh"
-  config.vm.provision "file", source: ENV['HOME']+"/.gitconfig", destination: ".gitconfig"
-  config.vm.provision "file", source: ENV['HOME']+"/.ssh/id_rsa", destination: ".ssh/id_rsa"
-  config.vm.provision "file", source: ENV['HOME']+"/.ssh/id_rsa.pub", destination: ".ssh/id_rsa.pub"
-  config.vm.provision "file", source: ENV['HOME']+"/.ssh/known_hosts", destination: ".ssh/known_hosts"
+  config.vm.provision "file", run: "always", source: "provision/user-settings.sh", destination: ".workshopvm/user-settings.sh"  
+  if File.exists?(ENV['HOME']+"/.gitconfig")
+    config.vm.provision "file", source: ENV['HOME']+"/.gitconfig", destination: ".gitconfig"
+  end
+  if File.exists?(ENV['HOME']+"/.ssh/id_rsa")
+    config.vm.provision "file", source: ENV['HOME']+"/.ssh/id_rsa", destination: ".ssh/id_rsa"
+    config.vm.provision "file", source: ENV['HOME']+"/.ssh/id_rsa.pub", destination: ".ssh/id_rsa.pub"
+  end
+  if File.exists?(ENV['HOME']+"/.ssh/known_hosts")
+    config.vm.provision "file", source: ENV['HOME']+"/.ssh/known_hosts", destination: ".ssh/known_hosts"
+  end
 
   # install docker and openshift CLI
   config.vm.provision "shell", path: "provision/docker.sh"
