@@ -5,7 +5,7 @@ Vagrant.configure(2) do |config|
   config.vm.hostname = "workshopvm"
   config.vm.define config.vm.hostname do |machinename|
   end
-  config.vm.box = "boxcutter/ubuntu1604-desktop"
+  config.vm.box = "box-cutter/ubuntu1604-desktop"
   config.vm.network "private_network", type: "dhcp"
 
   config.vm.synced_folder ".", "/vagrant", disabled:true
