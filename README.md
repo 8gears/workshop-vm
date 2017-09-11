@@ -96,7 +96,7 @@ cd workshop-vm
 
 If the Ubuntu Desktop pops up, wait until all the provision scripts finish. You can track their progress in the terminal.
 
-## Verification that everything is working
+## Working Environment Verification
 
 To finish the installation the last step is to verify that the WM is properly setup and working.
 Open a Terming and type the following:
