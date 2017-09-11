@@ -11,6 +11,7 @@ This VM was initially designed for 8gears Docker, Kubernetes or OpenShift worksh
 ## What is it?
 
 - Workshop VM is based on Ubuntu 16.04 with Unity Desktop.
+- Next to the main WM two small Docker Worker Nodes allow to build clustered environments. 
 - Vargrant is used to install and configure the VM.
 - Additional provision scripts install more tools and perform initial updates.
 
@@ -95,6 +96,16 @@ cd workshop-vm
 
 If the Ubuntu Desktop pops up, wait until all the provision scripts finish. You can track their progress in the terminal.
 
+## Verification that everything is working
+
+To finish the installation the last step is to verify that the WM is properly setup and working.
+Open a Terming and type the following:
+
+```sh
+docker run hello-world
+```
+
+The `Hello from Docker` message shows that your installation appears to be working correctly.
 
 ## General Usage
 
@@ -103,7 +114,7 @@ However it is also possible to do the same with the VirtualBox Manager GUI.
 
 The username and password is in both cases vagrant.
 
-During the workshop it is recommended to close all programms and stop unneeded process on the Host OS as this VM takes up 75% of the RAM. 
+During the workshop it is recommended to close all programs and stop unneeded process on the Host OS as this VM takes up 75% of the RAM.
 
 ## Known Issues
 
@@ -111,9 +122,9 @@ Sometimes things don't run as expected, especially as they are many files that a
 
 ## Project Principles
 
-* Community: If a newbie has a bad time, it's a bug.
-* Software: Make it work, then make it right, then make it fast.
-* Technology: If it doesn't do a thing today, we can make it do it tomorrow.
+- Community: If a newbie has a bad time, it's a bug.
+- Software: Make it work, then make it right, then make it fast.
+- Technology: If it doesn't do a thing today, we can make it do it tomorrow.
 
 ## Contributing
 

@@ -22,7 +22,7 @@ Vagrant.configure(2) do |config|
                   "--cableconnected1", "on"]                 
       vb.gui = true  # Display the VirtualBox GUI when booting the machine
       # Determine existing machine Memory& CPUs  and use it in the VM
-      mem_ratio = 0.75
+      mem_ratio = 0.50
       host = RbConfig::CONFIG['host_os']
       cpus = 1
       mem = 1024
